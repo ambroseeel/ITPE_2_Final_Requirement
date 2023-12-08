@@ -116,46 +116,44 @@
               >
                 Add Product
               </a>
+
+              <div class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
+              </svg> Login
             </form>
           </div>
         </div>
       </nav>
     </div>
-    <div class="container mt-3" id="containerLogin">
-      <label><h3>Login</h3></label>
-      <div class="form-floating mb-3">
-        <input
-          type="email"
-          class="form-control"
-          id="txtLoginEmail"
-          placeholder="name@example.com"
-        />
-        <label for="txtLoginEmail">Email address</label>
-      </div>
-      <div class="form-floating">
-        <input
-          type="password"
-          class="form-control"
-          id="txtLoginPassword"
-          placeholder="Password"
-        />
-        <label for="txtLoginPassword">Password</label>
-      </div>
-      <button id="btnLogin" type="button" class="btn btn-outline-primary mt-1">
-        Login
-      </button>
-      <a
-        type="button"
-        class="btn btn-outline-success mt-1"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-      >
-        Register
-      </a>
-      <a href="#" class="text-decoration-underline">Forgot password?</a>
-
       <!-- Modal -->
-      <div
+
+  <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5"  id="loginModalLabel" style="font-weight: bold;">Welcome back!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="Username" required>
+          <label for="floatingInput">Username</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+          <label for="floatingPassword" data-bs-toggle="modal" data-bs-target="#exampleModal">Password</label>
+        </div>
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-1 border-bottom"></div>
+
+      <div class="modal-footer">
+        <div id="registerHelp" class="form-text">Don't have an account?
+          <a class="link-info" href="register.html">Register now.</a> </div>
+        <a class="btn btn-success" href="#" role="button">Login</a>
+      </div>
+    </div>
+  </div>
+  <!--
+  <div
         class="modal fade"
         id="exampleModal"
         tabindex="-1"
@@ -305,6 +303,8 @@
         </div>
       </div>
     </div>
+
+  -->
     <div hidden class="container mt-3" id="containerProducts">
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
@@ -423,7 +423,7 @@
                 <input
                   type="email"
                   class="form-control"
-                  id="floatingInput"
+                  id="floatInput"
                   placeholder=""
                 />
                 <label for="floatingInput">Product Name</label>
